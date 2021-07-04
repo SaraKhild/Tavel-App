@@ -1,0 +1,568 @@
+
+@import 'header.scss';
+@import 'footer.scss';
+
+.grid-container{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1400px 60px;
+    grid-row-gap:10px;
+    grid-template-areas: 
+    "hd hd hd hd" 
+    "main main mian mian"
+    "ft ft ft ft";  
+}
+
+main{ grid-area: main;}
+
+.container{
+    margin: 0 auto;
+    background-image: linear-gradient(315deg,#059A44 0%,  #36B7F2 74%);
+    border-radius: 20px;
+    box-shadow: 2rem 2rem 3rem rgba(0,0,0,.1);
+    margin-top: 10%;
+    width: 85%;
+    height:320px;
+}
+
+.Title{
+    font-size: 30px;
+    color: #ffffff;
+    text-transform: uppercase; 
+    text-align: center;
+}
+
+.button{
+    font-size: 18px; 
+    padding: 10px 50px;
+    background-color: #FF0A0A;
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.button:hover{
+    background-color: #ffffff;
+    color: #FF0A0A;
+}
+
+.image{
+    margin-top: 3.5rem;
+    margin-left: 1.5rem;
+    max-height: 7rem;
+    max-width: 7rem;
+    display: inline-block;
+}
+
+
+img { height: 160%;
+      width: 160%;
+      border-radius:20%;
+    }
+
+
+/*---------about-----------*/
+
+#about_description{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#about_description p {
+    padding: 20px;
+    text-align: center;
+    color: #062A15;
+    font-size: 20px;
+}
+
+/*---------planner-----------*/
+
+#planner_description #form-heading{padding-top: 15px;}
+
+.form-container{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     left: 18%;
+     bottom: 70%;
+}
+.form_img{ position: relative; bottom: 15%;
+}
+
+.form-input {
+    width: 10%;
+    border: none;
+    border-bottom: 2px solid #062A15;
+    background: transparent;
+    margin-left: 10px;
+
+}
+
+.input-date{width: 16%;}
+
+
+.label{
+     color: #062A15;
+     font-size: 18px;
+     padding-left: 20px;
+}
+
+.submit{
+      display: inline-block;
+      position: relative;
+      right: 45%;
+      margin-top: 16%;
+}
+
+
+
+/*---------result-----------*/
+
+.result{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    width: 60vw;
+    height: auto;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    left: 18%;
+    bottom: 40%;     
+}
+
+.result-image{
+    position: relative;
+    left: 10px;
+    top:20px
+}
+
+.text-result{
+    font-size: 20px;
+    color: #062A15;
+  }
+
+ .text-result span {color: #ffffff;} 
+
+
+
+.save{
+      display: inline-block;
+      position: relative;
+      bottom:  35% ;
+      left: 35%;
+}
+
+
+.delete{
+     display: inline-block;
+     position: relative;
+     bottom: 35%;
+     left: 35%;
+}
+
+.invisible { display: none; }
+  
+
+
+
+/*---------Media Qurery---------*/
+
+@media(min-width:601px) and (max-width:900px){
+
+    .grid-container{ grid-template-rows: 120px 1500px 40px;}
+
+    header { flex-direction: column; text-align: center; }
+
+    .title{ margin: auto 0; }
+
+    .logo{ margin: auto 0;  width: 70px; height: 60px;}
+
+    .menu li { margin:  auto 0;  padding:10px 10px; }
+
+     a{ margin:  auto 0;  padding:  0; }
+
+     footer p {font-size: 18px; }
+
+     .container{ width: 80%; height:340px;}
+
+    .Title{ font-size: 20px; }
+
+    #about_description p {padding: 10px; font-size: 17px;}
+
+    .button{ font-size: 15px; padding: 5px 40px; }
+
+    #planner_description{
+        display: flex;
+        flex-flow: column ;
+        justify-items: space-evenly;
+        align-content:center;
+        width: 85%;
+        height: 380px;
+    }
+
+    .image{
+        position: relative;
+        top:8%;
+        margin-top: 4.5rem;
+        margin-right: 2.8rem;
+        max-height: 5.5rem;
+        max-width: 5.5rem;
+    }
+    
+    img { height: 140%;  width: 130%;}
+    
+    .form-container{
+        margin-top: 15px;
+        flex-direction: column;
+        left: 15%;
+        bottom:20%;
+    }
+ 
+   .submit{  right: 5%; margin:auto 0; }
+
+   .form-input {
+    width: 20%;
+    position: relative;
+    bottom: 30%;
+    margin: 0;
+    padding-bottom: 10px;
+   }
+
+.label{
+    position: relative;
+    right: 15%;
+    padding: 0;
+    bottom: 10%;
+    color: #062A15;
+    font-size: 15px;  
+}
+
+.date-lable{ margin-bottom: 15px; margin-right: 70px; }
+
+.input-date{ padding: 0; width: 23%;} 
+
+#result_description{ width:85%;}
+
+.text-result{
+   font-size: 15px;
+   justify-items: center;
+   align-content: center;
+  }
+
+.result{ left: 30%; bottom: 30%; }
+
+.save{ bottom:15%;}
+
+.delete{ bottom: 15%;}
+
+}
+
+
+
+@media(min-width:401px) and (max-width:600px){
+
+  
+
+    .grid-container{ grid-template-rows: 100px 1500px 40px;}
+
+    header { flex-direction: column; text-align: center; }
+
+    .title{ margin: auto 0; font-size: 15px;}
+
+    .logo{ margin: auto 0;  width: 60px; height: 50px;}
+
+    .menu li { margin:  auto 0;  padding:10px 10px;  font-size: 10px;}
+
+     a{ margin: auto 0; padding: 0; }
+
+     footer p {font-size: 12px; }
+
+     .container{ width: 70%; height:300px;}
+
+    .Title{ font-size: 18px; }
+
+    #about_description p {padding: 10px; font-size: 12px;}
+
+    .button{ font-size: 10px; padding: 5px 40px; }
+
+    #planner_description{
+        display: flex;
+        flex-flow: column ;
+        justify-items: space-evenly;
+        align-content:center;
+        width: 87%;
+    }
+
+    .image{
+        position: relative;
+        top:8%;
+        margin-top: 2.5rem;
+        margin-right: 2.8rem;
+        max-height: 4rem;
+        max-width: 4rem;
+    }
+    
+    img { height: 130%;  width: 130%;}
+    
+    .form-container{
+        margin-top: 15px;
+        flex-direction: column;
+        left: 15%;
+        bottom:20%;
+    }
+ 
+   .submit{ right: 5%; margin:auto 0; }
+
+   .form-input {
+    width: 20%;
+    position: relative;
+    bottom: 30%;
+    margin: 0;
+    padding-bottom: 10px;
+   }
+
+.label{
+    position: relative;
+    right: 15%;
+    padding: 0;
+    bottom: 10%;
+    color: #062A15;
+    font-size: 12px;  
+}
+
+.date-lable{ 
+     margin-bottom: 15px;
+     margin-right: 70px; 
+     padding-left: 15px; 
+     padding-right: 10px;
+     }
+
+.input-date{ padding: 0; width: 27.6%;} 
+
+#result_description{ width:87%;}
+
+.text-result{
+    font-size: 10px;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .result{  left: 35%;  bottom: 20%; }
+
+.save{ bottom:  5% ; left:30%;}
+
+
+.delete{ bottom: 5%; left: 30%;}
+
+}
+
+
+
+@media(min-width:360px) and (max-width:400px){
+
+  
+
+    .grid-container{ grid-template-rows: 95px 1000px 40px;}
+
+    header { flex-direction: column; text-align: center; }
+
+    .title{ margin: auto 0; font-size: 12px;}
+
+    .logo{ margin: auto 0;  width: 50px; height: 40px;}
+
+    .menu li { margin:  auto 0; padding:10px 10px;  font-size: 10px;}
+
+     a{ margin: auto 0;  padding:  0; }
+
+     footer p {font-size: 12px; }
+
+     .container{ width: 70%; height:300px;}
+
+    .Title{ font-size: 15px; }
+
+    #about_description p {padding: 10px; font-size: 10px;}
+
+    .button{ font-size: 10px; padding: 5px 40px; }
+
+    #planner_description{
+        display: flex;
+        flex-flow: column ;
+        justify-items: space-evenly;
+        align-content:center;
+        width: 90%;
+    }
+
+    .image{
+        position: relative;
+        top:8%;
+        margin-top: 2.5rem;
+        margin-right: 2.8rem;
+        max-height: 3rem;
+        max-width: 3rem;
+    }
+    
+    img { height: 132%;  width: 132%;}
+    
+    .form-container{
+        margin-top: 15px;
+        flex-direction: column;
+        left: 15%;
+        bottom:20%;
+    }
+ 
+   .submit{ right: 10%; margin:auto 0; }
+
+   .form-input {
+    width: 20%;
+    position: relative;
+    bottom: 30%;
+    margin: 0;
+    padding-bottom: 10px;
+   }
+
+.label{
+    position: relative;
+    right: 15%;
+    padding: 0;
+    bottom: 10%;
+    color: #062A15;
+    font-size: 12px;  
+}
+
+.date-lable{ 
+    margin-bottom: 15px;
+     margin-right: 70px; 
+     padding-left: 15px; 
+     padding-right: 10px;
+     }
+
+.input-date{ padding: 0; width: 28%;} 
+
+#result_description{ width:90%}
+
+.text-result{
+   font-size: 10px;
+   justify-items: center;
+   align-content: center;
+  }
+
+.result{ left: 29%; bottom: 20%;}
+
+.save{ bottom: 5% ; left: 25%;}
+
+.delete{ bottom: 5%; left: 25%;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

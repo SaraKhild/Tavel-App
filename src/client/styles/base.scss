@@ -1,0 +1,13 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden; //horizontal
+    overflow-y: scroll; //vertical
+    background-image: url("../views/image/background.jpg");
+    font-family: Comfortaa, cursive;
+}

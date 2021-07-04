@@ -1,0 +1,41 @@
+/*---------header----------*/
+
+header {
+    grid-area: hd;
+    background-color: #36B7F2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.title{
+  color: #059A44;
+  margin-right: 65%;
+}
+
+.logo{
+  margin-left: -60px;
+  width: 60px;
+  height: 50px;
+}
+
+.menu{
+  list-style: none;
+  flex-direction: row; 
+  justify-content: space-between; align-items: center;
+}
+
+li ,a {
+  font-weight: 500;
+  font-size: 16;
+  color: #059A44;
+  display: inline-block;
+  text-decoration: none;
+  padding-left: 50px ;
+  margin-right:-40px ;
+}
+
+
+
+

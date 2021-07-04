@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Travel App</title>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+    <body>
+
+        <div class="grid-container">
+            <header>
+             <img src="./image/logo.jpg" alt="logo" class="logo">
+           
+                <h4 class="title">Travel App</h4>
+                <ul class="menu">
+                    <li><a href="#about"> About </a></li>
+                    <li><a href="#planner"> Your plan </a></li>
+                </ul>
+            </header>
+
+         <main>
+            <section id="about">
+                <div class="container" id="about_description">
+                    <div class="Title" class="title_desc">Travel</div>
+                    <p>Travel is the movement of people between distant geographical locations. 
+                       Travel can be done by foot, bicycle, automobile, train, boat, bus, airplane, ship or other means,
+                        with or without luggage, and can be one way or round trip.
+                        Travel can also include relatively short stays between successive movements, as in the case of tourism.</p>
+                     <button  id="addYourTribBtn" class="button"> + add your trip </button>
+                </div>
+            </section>
+
+
+            <section id="planner">
+                <div class="container" id="planner_description">
+                    <div  class="Title" id="form-heading">Plan your trip</div>
+                    <div class=" image form_img">
+                        <img src="./image/earth-globe.png" alt="Earth">
+                    </div>
+                    <form class="form-container"> 
+                        <label class="label" for="date"> from:  </label> 
+                        <input type="text" id="from" class="form-input" name="from" required>
+                        <label class="label" for="date"> to:  </label> 
+                        <input type="text" id="to" class="form-input" name="to"  required>
+                        <label class="label date-lable" for="date">departing on: </label>
+                        <input type="date" id="dateinput" class="form-input input-date" name="date" required> 
+                        <input type="submit" name="submit" id="submit"  class=" button submit" value="Submit">
+                      
+                    </form>
+                </div>
+            </section>
+
+            <section  id="result"  class='invisible'>
+                <div class="container" id="result_description">
+                    <div class="image result-image">
+                        <img src="./image/earth-globe.png" alt="Earth" id="image-result">
+                    </div>
+                     <div class=" result">
+                        <h5 class="city-name text-result">You are travling from: <span id="fromCity">city</span></h5>
+                        <h5 class="city-name text-result">You are going to: <span id="toCity">city</span></h5>
+                        <h5 class="date-name text-result">Departing on: <span id="date">DD/MM/YYYY</span> </h5>
+                        <h5 class="weather-name text-result">Expect weather to be: <span id="temp">150C</span> &#176; F, 
+                            <span id="weatherCondition"></span>.</h5>
+                     </div>
+                     <button class="button save"> save </button>
+                     <button class=" button delete"> delete </button> 
+                                    
+                   
+                    </div>
+                </section>
+          </main>
+
+            <footer>
+                <p><Strong>Develpment By</Strong> Sara &hearts;</p>
+            </footer>
+            
+        </div> <!--end grid-container-->
+
+         
+      <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+            else {
+            console.log("Service Working not working");
+            }
+        </script>   
+    </body>
+</html>
