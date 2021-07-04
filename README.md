@@ -1,7 +1,9 @@
-# Project Instructions:
+# Tavel App
+
+### Project Instructions:
 This project is a simple web application that includes a template where you enter the location you are traveling to and the date you left. You will get a picture of the city, name of the city, departure date and weather forecast.
 
-## Usage: HTML , CSS , JavaScript
+### Usage: HTML , CSS , JavaScript
 
 ### APIs:
 1. Pixabay
